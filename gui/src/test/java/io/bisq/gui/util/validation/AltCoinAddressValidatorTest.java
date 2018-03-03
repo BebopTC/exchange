@@ -738,4 +738,21 @@ public class AltCoinAddressValidatorTest {
         assertFalse(validator.validate("DG1KpSsSXd3uitgwHaA1i6T1Bj1hWLONGER").isValid);
         assertFalse(validator.validate("HG1KpSsSXd3uitgwHaA1i6T1Bj1hWEwAxB").isValid);
     }
+
+    @Test
+    public void testTRTL() {
+        AltCoinAddressValidator validator = new AltCoinAddressValidator();
+        validator.setCurrencyCode("TRTL");
+
+        assertTrue(validator.validate("TRTLuxbDvqKAzdrfvtEemNNVWJujwTMEVTZjhQPcagGmh8miyCA2fuqfg8jF1Hz3oQBhdcehsztd9ZADZjfce4XP2ajszr6TZne").isValid);
+        assertTrue(validator.validate("TRTLv2Pb423iPtLu97KvyHfBVrmSAA2BuCQKBSXyktBQ3kL29pM45TiKZYzfKR6u4XJSpkoJBdhT8BC6ynNDxSb7ENBwMAY2MQ1").isValid);
+        assertTrue(validator.validate("TRTLuynnkTFJGP5BZBAjJcG2Qbpd4VWCtM4JoHXSo7SmPwiDjTfpNj8dsSgmJDnFmsH7GWnhiv5hXD8mPmzeQ3yMZ4JYqDGuthh").isValid);
+        assertTrue(validator.validate("TRTLuxtEtNpDazrrQEeaR518RqosWwogWZZXXzD2HdqQXE4oMZtzD5K36JVgfKWrwnfsxZQ27UoPS7Ut9v5Gj9y5YqXbQ3QJn2A").isValid);
+        assertTrue(validator.validate("TRTLuydC95vE5bLxVWSSwxVFKGTv1DQ2uasMy17NGwS6EJM8A48PAWK48AK23Pt9SB2HnuaVGhUCtTzkfUAyqE9ECGgKUdENiGb").isValid);
+
+        assertFalse(validator.validate("TRTLuydC95vE5bLxVWSSwxVFKGTv1DQ2uasMy17NGwS6EJM8A48PAWK48AK23Pt9SB2HnuaVGhUCtTzkfUAyqE9ECGgKUdENiG").isValid);
+        assertFalse(validator.validate("TRTLuydC95vE5bLxVWSSwxVFKGTv1DQ2uasMy17NGwS6EJM8A48PAWK48AK23Pt9SB2HnuaVGhUCtTzkfUAyqE9ECGgKUdENiGO").isValid);
+        assertFalse(validator.validate("TRLuydfC95vE5bLxVWSSwxVFKGTv1DQ2uasMy17NGwS6EJM8A48PAWK48AK23Pt9SB2HnuaVGhUCtTzkfUAyqE9ECGgKUdENiGb").isValid);
+        assertFalse(validator.validate("TRTLuydC95vE5bLxVWSSwxVFKGTv1DQ2uasMy17NGwS6EJM8A48PAWK48AK23Pt9SB2HnuaVGhUCtTzkfUAyqE9ECGgKUdENiGbd").isValid);
+    }
 }
