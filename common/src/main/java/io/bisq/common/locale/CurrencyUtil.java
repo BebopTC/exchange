@@ -147,6 +147,7 @@ public class CurrencyUtil {
         result.add(new CryptoCurrency("STEEM", "STEEM"));
 
         result.add(new CryptoCurrency("TRC", "Terracoin"));
+        result.add(new CryptoCurrency("TRTL", "TurtleCoin"));
         result.add(new CryptoCurrency("MVT", "The Movement", true));
 
         result.add(new CryptoCurrency("UNO", "Unobtanium"));
