@@ -467,7 +467,7 @@ public final class AltCoinAddressValidator extends InputValidator {
 
                     // Add new coins at the end...
                 case "TRTL":
-                    if (!input.matches("^TRTL[1-9A-Za-z^OIl]{95}"))
+                    if (!input.matches("^TRTL[a-km-zA-HJ-NP-Z1-9]{95}"))
                         return regexTestFailed;
                     else
                         return new ValidationResult(true);
