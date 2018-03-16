@@ -161,6 +161,11 @@ public class AltCoinAccountsView extends ActivatableViewAndModel<GridPane, AltCo
                             .useIUnderstandButton()
                             .show();
                     break;
+                case "TRTL":
+                    new Popup<>().information(Res.get("account.altcoin.popup.trtl.msg"))
+                            .useIUnderstandButton()
+                            .show();
+                    break;
             }
 
             if (!model.getPaymentAccounts().stream().filter(e -> e.getAccountName() != null &&
